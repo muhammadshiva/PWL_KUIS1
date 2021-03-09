@@ -17,4 +17,12 @@ class HomeController extends Controller
         return view('video-page', ['posts' => Post::videoprev()]);
     }
 
+    public function about() {
+        return view('about');
+    }
+
+    public function contact() {
+        return view('contact');
+    }
+
 }
