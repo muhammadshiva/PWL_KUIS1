@@ -16,3 +16,7 @@ use App\http\Controllers\HomeController;
 Route::get('/', [HomeController::class, 'index']);
 
 Route::get('/vidio', [HomeController::class, 'show']);
+
+Route::get('/about', [HomeController::class, 'about']);
+
+Route::get('/contact', [HomeController::class, 'contact']);
