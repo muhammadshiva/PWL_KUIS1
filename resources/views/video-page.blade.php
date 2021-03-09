@@ -57,19 +57,19 @@
 		<div class="col-12">
 			<h2 class="mb-5 tm-text-primary">Related Videos for You</h2>
 			<div class="row tm-catalog-item-list">
-	
+				@foreach ($posts as $post)
 				<div class="col-lg-4 col-md-6 col-sm-12 tm-catalog-item">
 					<div class="position-relative tm-thumbnail-container">
-						<img src="img/tn-01.jpg" alt="Image" class="img-fluid tm-catalog-item-img">    
+						<img src="{{$post->video}}" alt="Image" class="img-fluid tm-catalog-item-img">    
 						<a href="{{url('/vidio')}}" class="position-absolute tm-img-overlay">
 							<i class="fas fa-play tm-overlay-icon"></i>
 						</a>
 					</div>    
 					<div class="p-3 tm-catalog-item-description">
-						<h3 class="tm-text-gray text-center tm-catalog-item-title">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi, impedit.</h3>		                                
+						<h3 class="tm-text-gray text-center tm-catalog-item-title">{{$post->title}}</h3>		                                
 					</div>
 				</div>
-			
+				@endforeach 
 			</div>
 		</div>
 	</div>

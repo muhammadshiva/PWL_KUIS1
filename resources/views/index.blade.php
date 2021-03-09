@@ -39,20 +39,20 @@
         </div>
                     
         <div class="row tm-catalog-item-list">
-          
+            @foreach ($posts as $post)
                 <div class="col-lg-4 col-md-6 col-sm-12 tm-catalog-item">
                     <div class="position-relative tm-thumbnail-container">
-                        <img src="img/tn-01.jpg" alt="Image" class="img-fluid tm-catalog-item-img">  
+                        <img src="{{$post->video}}" alt="Image" class="img-fluid tm-catalog-item-img">  
                         <a href="{{url('/vidio')}}" class="position-absolute tm-img-overlay">
                             <i class="fas fa-play tm-overlay-icon"></i>
                         </a>
                     </div>
                     <div class="p-4 tm-bg-gray tm-catalog-item-description">
-                        <h3 class="tm-text-primary mb-3 tm-catalog-item-title">Lorem, ipsum dolor.</h3>
-                        <p class="tm-catalog-item-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, accusamus.</p>
+                        <h3 class="tm-text-primary mb-3 tm-catalog-item-title">{{$post->title}}</h3>
+                        <p class="tm-catalog-item-text">{{$post->content}}</p>
                     </div>
                 </div>     
-    
+            @endforeach
         </div>
         <!-- Catalog Paging Buttons -->
         <div>
