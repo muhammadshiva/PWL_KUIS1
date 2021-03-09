@@ -49,7 +49,7 @@
                     </div>
                     <div class="p-4 tm-bg-gray tm-catalog-item-description">
                         <h3 class="tm-text-primary mb-3 tm-catalog-item-title">{{$post->title}}</h3>
-                        <p class="tm-catalog-item-text">{{$post->content}}</p>
+                        <p class="tm-catalog-item-text">{!! $post->content !!}</p>
                     </div>
                 </div>     
             @endforeach
