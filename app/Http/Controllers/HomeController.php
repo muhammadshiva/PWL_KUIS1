@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\Models\Post; // Calling the model Post
 use App\Models\Testimonial; // Calling the model Testimonial
+use App\Models\Feature; // Calling the model Testimonial
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -19,7 +20,7 @@ class HomeController extends Controller
     }
 
     public function about() {
-        return view('about');
+        return view('about', ['features' => Feature::index()]);
     }
 
     public function contact() {
