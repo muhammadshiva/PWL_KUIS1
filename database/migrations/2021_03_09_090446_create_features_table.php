@@ -15,7 +15,8 @@ class CreateFeaturesTable extends Migration
     {
         Schema::create('features', function (Blueprint $table) {
             $table->id();
-            $table->string('image');
+            $table->string('icon');
+            $table->string('title', 100)->index();
             $table->text('content');
             $table->boolean('draft')->default(false);
             $table->dateTime('created_at')->default(DB::raw('CURRENT_TIMESTAMP'));

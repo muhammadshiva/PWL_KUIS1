@@ -14,8 +14,9 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        $this->call([PostSeeder::class, TestimonialSeeder::class]);
+        $this->call([PostSeeder::class, TestimonialSeeder::class, FeatureSeeder::class]);
         Post::factory(100)->create();
         Testimonial::factory(100)->create();
+        Feature::factory(100)->create();
     }
 }
