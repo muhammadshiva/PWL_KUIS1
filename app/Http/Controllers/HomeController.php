@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Models\Post; // Calling the model Post
+use App\Models\Testimonial; // Calling the model Testimonial
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -22,7 +23,8 @@ class HomeController extends Controller
     }
 
     public function contact() {
-        return view('contact');
+        return view('contact', ['testimonials' => Testimonial::index()]);
     }
+
 
 }

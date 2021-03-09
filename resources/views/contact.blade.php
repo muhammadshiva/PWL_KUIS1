@@ -77,14 +77,15 @@
                     </div>                        
                 </div>
                 <div class="row">
-                <div class="col-lg-6 mb-5 pt-3">
-                    <div class="media tm-testimonial">
-                        <img class="mr-4 rounded-circle img-fluid" src="img/testimonial-1.jpg" alt="Generic placeholder image">
-                        <p class="media-body pt-3 tm-testimonial-text">
-                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat provident pariatur maxime dolore nobis ipsum!
-                        </p>                              
-                    </div>              
-                </div>
+                @foreach ($testimonials as $testimonial)
+                    <div class="col-lg-6 mb-5 pt-3">
+                        <div class="media tm-testimonial">
+                            <img class="mr-4 rounded-circle img-fluid" src="{{$testimonial->image}}" alt="Generic placeholder image">
+                            <p class="media-body pt-3 tm-testimonial-text">{{$testimonial->content}}</p>                              
+                        </div>              
+                    </div> 
+                @endforeach
+                
         </div>
     </main>
 @endsection
