@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\http\Controllers\HomeController;
+use App\http\Controllers\DashboardController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -20,3 +21,9 @@ Route::get('/vidio', [HomeController::class, 'show']);
 Route::get('/about', [HomeController::class, 'about']);
 
 Route::get('/contact', [HomeController::class, 'contact']);
+
+Route::prefix('admin')->group(function() {
+    Route::get('/', [DashboardController::class, 'index']);
+    Route::get('/pegawai', [DashboardController::class, 'pegawai']);
+    Route::get('/supplier', [DashboardController::class, 'supplier']);
+});
