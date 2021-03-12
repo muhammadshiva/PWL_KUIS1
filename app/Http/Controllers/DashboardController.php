@@ -19,4 +19,8 @@ class DashboardController extends Controller
     public function pegawai() {
         return view('admin.pegawai',  ['users' => User::index()]);
     }
+
+    public function pelanggan() {
+        return view('admin.pelanggan');
+    }
 }
