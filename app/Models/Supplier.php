@@ -8,4 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Supplier extends Model
 {
     use HasFactory;
+    public static function supplier(){
+        return Supplier::get();
+    }   
 }
