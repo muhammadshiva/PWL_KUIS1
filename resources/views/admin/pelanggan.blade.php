@@ -29,12 +29,14 @@
                 </th>
               </thead>
               <tbody>
+                @foreach ($pelanggans as $pelanggan)
                   <tr>
-                    <td>id</td>
-                    <td>name</td>
-                    <td>telepon</td>
-                    <td>alamat</td>
+                    <td>{{$pelanggan->id}}</td>
+                    <td>{{$pelanggan->name}}</td>
+                    <td>{{$pelanggan->telepon}}</td>
+                    <td>{{$pelanggan->alamat}}</td>
                   </tr>
+                @endforeach
               </tbody>
             </table>
           </div>
