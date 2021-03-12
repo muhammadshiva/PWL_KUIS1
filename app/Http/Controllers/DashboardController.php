@@ -27,6 +27,6 @@ class DashboardController extends Controller
     }
 
     public function barang() {
-        return view('admin.barang');
+        return view('admin.barang',  ['barangs' => Barang::barang()]);
     }
 }

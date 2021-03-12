@@ -29,12 +29,14 @@
                 </th>
               </thead>
               <tbody>
+                @foreach ($barangs as $barang)
                   <tr>
-                    <td>Id</td>
-                    <td>Nama</td>
-                    <td>Harga</td>
-                    <td>Stock</td>
+                    <td>{{$barang->id}}</td>
+                    <td>{{$barang->name}}</td>
+                    <td>{{$barang->harga}}</td>
+                    <td>{{$barang->stock}}</td>
                   </tr>
+                @endforeach
               </tbody>
             </table>
           </div>
