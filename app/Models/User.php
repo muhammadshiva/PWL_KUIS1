@@ -16,6 +16,11 @@ class User extends Authenticatable
      *
      * @var array
      */
+
+    public static function index(){
+        return User::get();
+    }   
+
     protected $fillable = [
         'name',
         'email',

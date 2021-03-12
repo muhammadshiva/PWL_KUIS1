@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\User;
 
 class DashboardController extends Controller
 {
@@ -15,6 +16,6 @@ class DashboardController extends Controller
     }
 
     public function pegawai() {
-        return view('admin.pegawai');
+        return view('admin.pegawai',  ['users' => User::index()]);
     }
 }
