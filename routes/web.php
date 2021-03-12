@@ -27,4 +27,5 @@ Route::prefix('admin')->group(function() {
     Route::get('/pegawai', [DashboardController::class, 'pegawai']);
     Route::get('/supplier', [DashboardController::class, 'supplier']);
     Route::get('/pelanggan', [DashboardController::class, 'pelanggan']);
+    Route::get('/barang', [DashboardController::class, 'barang']);
 });

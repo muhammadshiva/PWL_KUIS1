@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\Supplier;
 use App\Models\Pelanggan;
+use App\Models\Barang;
 
 class DashboardController extends Controller
 {
@@ -23,5 +24,9 @@ class DashboardController extends Controller
 
     public function pelanggan() {
         return view('admin.pelanggan', ['pelanggans' => Pelanggan::pelanggan()]);
+    }
+
+    public function barang() {
+        return view('admin.barang');
     }
 }
