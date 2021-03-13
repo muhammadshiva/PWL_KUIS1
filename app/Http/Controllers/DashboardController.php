@@ -7,11 +7,12 @@ use App\Models\User;
 use App\Models\Supplier;
 use App\Models\Pelanggan;
 use App\Models\Barang;
+use App\Models\Dashboard;
 
 class DashboardController extends Controller
 {
     public function index() {
-        return view('admin.dashboard');
+        return view('admin.dashboard', ['countSupplier' => Supplier::count()], ['countPelanggan' => Pelanggan::count()]);
     }
 
     public function supplier() {
@@ -22,6 +23,10 @@ class DashboardController extends Controller
         return view('admin.pegawai',  ['users' => User::index()]);
     }
 
+    public function detailPegawai($id) {
+        return view('admin.user', ['pegawai' => User::detailData($id)]);
+    }
+ 
     public function pelanggan() {
         return view('admin.pelanggan', ['pelanggans' => Pelanggan::pelanggan()]);
     }

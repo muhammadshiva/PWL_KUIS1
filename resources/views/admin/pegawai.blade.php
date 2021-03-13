@@ -52,6 +52,9 @@
                       <input type="password" disabled class="border-0 bg-white" value="{{$user->password}}">
                     </td>
                     <td>
+                      <a href="/admin/pegawai/detail/{{$user->id}}" class="btn btn-info">
+                        <i class="material-icons">remove_red_eye</i>
+                      </a>
                       <a href="#" class="btn btn-danger">
                         <i class="material-icons">delete</i>
                       </a>

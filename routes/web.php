@@ -25,6 +25,7 @@ Route::get('/contact', [HomeController::class, 'contact']);
 Route::prefix('admin')->group(function() {
     Route::get('/', [DashboardController::class, 'index']);
     Route::get('/pegawai', [DashboardController::class, 'pegawai']);
+    Route::get('/pegawai/detail/{id}', [DashboardController::class, 'detailPegawai']);
     Route::get('/supplier', [DashboardController::class, 'supplier']);
     Route::get('/pelanggan', [DashboardController::class, 'pelanggan']);
     Route::get('/barang', [DashboardController::class, 'barang']);

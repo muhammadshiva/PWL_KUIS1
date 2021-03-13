@@ -20,6 +20,9 @@ class User extends Authenticatable
     public static function index(){
         return User::get();
     }   
+    public static function detailData($id){
+        return User::where('id', $id)->first();
+    }
 
     protected $fillable = [
         'name',
