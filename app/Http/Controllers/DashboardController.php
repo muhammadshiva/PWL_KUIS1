@@ -12,7 +12,8 @@ use App\Models\Dashboard;
 class DashboardController extends Controller
 {
     public function index() {
-        return view('admin.dashboard', ['countSupplier' => Supplier::count()], ['countPelanggan' => Pelanggan::count()]);
+        
+        return view('admin.dashboard', ['countSupplier' => Supplier::count(), 'countPelanggan' => Pelanggan::count(), 'suppliers' => Supplier::supplier(), 'movies' => Barang::barang()]);
     }
 
     public function supplier() {
